@@ -7,8 +7,10 @@ using System.Configuration;
 
 namespace LiveReload
 {
+    // Class for managing application user settings.
     class LiveReloadSettings: ApplicationSettingsBase
     {
+        // Setting for the "Host" of the user.
         [UserScopedSetting()]
         [DefaultSettingValue("")]
         public String UserHost
@@ -23,6 +25,7 @@ namespace LiveReload
             }
         }
 
+        // Setting for the "Document Root" of the user.
         [UserScopedSetting()]
         [DefaultSettingValue("")]
         public String UserDocumentRoot
