@@ -7,8 +7,11 @@ using System.IO;
 
 namespace LiveReload
 {
+    // Factory for creating the proper LiveReloadFile instance.
     class LiveReloadFileFactory
     {
+        // Our main factory method. 
+        // Returns the correct instance of LiveReloadFile.
         public static LiveReloadFile Get(string filePath)
         {
             string extension = Path.GetExtension(filePath).ToLower();
