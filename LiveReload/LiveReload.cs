@@ -50,12 +50,13 @@ namespace LiveReload
             }
         }
 
-        // The exit method
+        // The exit method.
         private void ExitApplication(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        // Display the settings form.
         private void ShowMainForm(object sender, EventArgs e)
         {
             this.Show();
@@ -63,6 +64,7 @@ namespace LiveReload
             this.ShowInTaskbar = true;
         }
 
+        // Save the form settings.
         private void SaveSettings(object sender, EventArgs e)
         {
             Boolean has_error = false;
@@ -110,9 +112,11 @@ namespace LiveReload
             }
             
         }
-
+        
+        // An internal pointer to the settings object.
         internal LiveReloadSettings Settings { get; set; }
 
+        // Called upon changing one of the watched files.
         private void FileWatcherChanged(object sender, FileSystemEventArgs e)
         {
             LiveReloadFile file = LiveReloadFileFactory.Get(e.FullPath);
