@@ -67,20 +67,29 @@ namespace LiveReload
         // Save the form settings.
         private void SaveSettings(object sender, EventArgs e)
         {
+            // Contains a flag - whether we have an error or not.
             Boolean has_error = false;
+
+            // Validate Host field - should not be empty.
             if (settings_host.Text.Length < 1)
             {
                 MessageBox.Show("Please, input your Host.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                 has_error = true;
-            } else if (settings_document_root.Text.Length < 1)
+            } 
+
+            // Validate Document Root field - should not be empty.
+            else if (settings_document_root.Text.Length < 1)
             {
                 MessageBox.Show("Please, input your Document Root.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                 has_error = true;
+
+            // Validate Document Root field - should be a valid directory.
             } else if (!Directory.Exists(settings_document_root.Text)) {
                 MessageBox.Show("Invalid Document Root.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                 has_error = true;
             } else {
 
+                // Validate Host - should be a valid, reachable host.
                 try
                 {
                     Ping ping_sender = new Ping();
@@ -117,6 +126,7 @@ namespace LiveReload
         internal LiveReloadSettings Settings { get; set; }
 
         // Called upon changing one of the watched files.
+        // Used as a link between our main application form and the LiveReloadFile instances.
         private void FileWatcherChanged(object sender, FileSystemEventArgs e)
         {
             LiveReloadFile file = LiveReloadFileFactory.Get(e.FullPath);
