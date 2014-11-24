@@ -12,15 +12,23 @@ using System.IO;
 
 namespace LiveReload
 {
+    // Main application form class
     public partial class LiveReload : Form
     {
+        // Constructor
         public LiveReload()
         {
+            // Initialize visual form controls
             InitializeComponent();
 
+            // Initialize settings
             this.Settings = new LiveReloadSettings();
+
+            // Setup settings field values
             settings_host.Text = this.Settings.UserHost;
             settings_document_root.Text = this.Settings.UserDocumentRoot;
+
+            // Setup the filewatcher path
             fileWatcher.Path = this.Settings.UserDocumentRoot;
         }
 
