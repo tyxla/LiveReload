@@ -10,7 +10,7 @@ namespace LiveReload
     // Abstract class for a file that is being saved.
     abstract class LiveReloadFile
     {
-        // Constructor. Specifies the path of the updated file
+        // Constructor. Specifies the path of the updated file.
         public LiveReloadFile(string filePath)
         {
             this.FilePath = filePath;
@@ -20,10 +20,10 @@ namespace LiveReload
         // Must be implemented in the child classes.
         abstract public void Process();
 
-        // Contains the file path
+        // Contains the file path.
         private string filePath;
 
-        // Setter & getter for file path
+        // Setter & getter for file path.
         protected string FilePath
         {
             get { return filePath; }

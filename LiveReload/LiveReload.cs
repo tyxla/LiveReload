@@ -12,28 +12,30 @@ using System.IO;
 
 namespace LiveReload
 {
-    // Main application form class
+    // Main application form class.
     public partial class LiveReload : Form
     {
-        // Constructor
+        // Constructor.
         public LiveReload()
         {
-            // Initialize visual form controls
+            // Initialize visual form controls.
             InitializeComponent();
 
-            // Initialize settings
+            // Initialize settings.
             this.Settings = new LiveReloadSettings();
 
-            // Setup settings field values
+            // Setup settings field values.
             settings_host.Text = this.Settings.UserHost;
             settings_document_root.Text = this.Settings.UserDocumentRoot;
 
-            // Setup the filewatcher path
+            // Setup the filewatcher path.
             fileWatcher.Path = this.Settings.UserDocumentRoot;
         }
 
+        // The file formats that we'll be listening for.
         public static string[] allowedFormats = { ".css", ".html", ".htm", ".js" };
 
+        // Called on minimize/maximize to toggle the tray icon.
         private void LiveReloadResize(object sender, EventArgs e)
         {
             if (FormWindowState.Minimized == this.WindowState)
@@ -48,6 +50,7 @@ namespace LiveReload
             }
         }
 
+        // The exit method
         private void ExitApplication(object sender, EventArgs e)
         {
             Application.Exit();
