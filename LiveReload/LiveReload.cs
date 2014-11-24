@@ -109,14 +109,18 @@ namespace LiveReload
 
             }
 
+            // If everything is fine, proceed with saving.
             if (!has_error)
             {
+                // Fetch and save settings.
                 this.Settings.UserHost = settings_host.Text;
                 this.Settings.UserDocumentRoot = settings_document_root.Text;
                 this.Settings.Save();
 
+                // Modify the filewatcher path.
                 fileWatcher.Path = settings_document_root.Text;
 
+                // Display a success message.
                 MessageBox.Show("Your settings have been saved.", "Success.");
             }
             
