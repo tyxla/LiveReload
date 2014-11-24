@@ -9,6 +9,7 @@ namespace LiveReload
     // Main application class
     static class Program
     {
+        // Main application method
         [STAThread]
         static void Main()
         {
