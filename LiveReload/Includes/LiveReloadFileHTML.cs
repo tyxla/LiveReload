@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +18,7 @@ namespace LiveReload
         }
 
         // Process the file after being saved. 
-        public override void Process()
+        public override void ProcessReload()
         {
             // TODO: implement livereload
             MessageBox.Show("HTML FILE SAVED!");

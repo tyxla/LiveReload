@@ -15,7 +15,7 @@ namespace LiveReload
         }
 
         // Process the file after being saved. 
-        public override void Process()
+        public override void ProcessReload()
         {
             // Nothing should happen here. 
             // This file appears be of no concern to us.

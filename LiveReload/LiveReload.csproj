@@ -50,6 +50,7 @@
     <Compile Include="Includes\LiveReloadFileFactory.cs" />
     <Compile Include="Includes\LiveReloadFileHTML.cs" />
     <Compile Include="Includes\LiveReloadFileJS.cs" />
+    <Compile Include="Includes\LIveReloadSendInput.cs" />
     <Compile Include="Includes\LiveReloadSettings.cs" />
     <Compile Include="LiveReload.cs">
       <SubType>Form</SubType>

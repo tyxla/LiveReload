@@ -134,7 +134,7 @@ namespace LiveReload
         private void FileWatcherChanged(object sender, FileSystemEventArgs e)
         {
             LiveReloadFile file = LiveReloadFileFactory.Get(e.FullPath);
-            file.Process();
+            file.ProcessReload();
         }
 
     }

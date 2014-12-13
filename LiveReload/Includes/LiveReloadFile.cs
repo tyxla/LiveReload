@@ -18,7 +18,7 @@ namespace LiveReload
 
         // Process the file after being saved.
         // Must be implemented in the child classes.
-        abstract public void Process();
+        abstract public void ProcessReload();
 
         // Contains the file path.
         private string filePath;
