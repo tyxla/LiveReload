@@ -45,6 +45,8 @@ namespace LiveReload
                     LiveReloadSendInput.SetForegroundWindow(currentWindowHandle);
                 }
             }
+
+            // TODO: refresh other famous browsers
         }
     }
 }
