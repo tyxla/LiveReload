@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Includes\LiveReloadBrowser.cs" />
     <Compile Include="Includes\LiveReloadFile.cs" />
     <Compile Include="Includes\LiveReloadFileCSS.cs" />
     <Compile Include="Includes\LiveReloadFileDefault.cs" />

@@ -20,8 +20,7 @@ namespace LiveReload
         // Process the file after being saved. 
         public override void ProcessReload()
         {
-            // TODO: implement livereload
-            MessageBox.Show("HTML FILE SAVED!");
+            LiveReloadBrowser.Refresh();
         }
     }
 }
