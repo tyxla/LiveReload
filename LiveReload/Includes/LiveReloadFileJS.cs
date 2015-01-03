@@ -18,6 +18,7 @@ namespace LiveReload
         // Process the file after being saved. 
         public override void ProcessReload()
         {
+            // Refresh the browser(s)
             LiveReloadBrowser.Refresh();
         }
     }
